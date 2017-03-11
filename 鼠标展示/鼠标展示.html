@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			#box {
+				height: 70px;
+				width: 360px;
+				padding-top: 360px;
+				border: 1px solid #ccc;
+				margin: 100px auto;
+				overflow: hidden;
+				background: url(images/01big.jpg) no-repeat;
+			}
+			#box ul{
+				border-top: 1px solid #ccc;
+			}
+			#box li {
+				float: left;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			window.onload = function(){
+				function fn(liid,bg){
+					$(liid).onmouseover = function(){
+						$("box").style.backgroundImage = bg;
+					}
+				}
+				for(var i =1;i<6;i++){
+				fn("li0"+i,"url(images/0"+i+"big.jpg)")
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul>
+				<li id="li01"><img src="images/01.jpg" alt="" /></li>
+				<li id="li02"><img src="images/02.jpg" alt="" /></li>
+				<li id="li03"><img src="images/03.jpg" alt="" /></li>
+				<li id="li04"><img src="images/04.jpg" alt="" /></li>
+				<li id="li05"><img src="images/05.jpg" alt="" /></li>
+			</ul>
+		</div>
+	</body>
+
+</html>
